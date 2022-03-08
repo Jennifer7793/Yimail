@@ -13,4 +13,6 @@ class Letter < ApplicationRecord
     received: 0,
     sent: 1
   }
+  scope :find_first_letter, -> { where(letter_id: 1) }
+  scope :find_letter, proc.new { where(letter_id: 1) }
 end

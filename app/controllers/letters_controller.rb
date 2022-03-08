@@ -96,4 +96,8 @@ class LettersController < ApplicationController
   def label_folder
     @label_folder = current_user.labels.order(:hierarchy)
   end
+
+  def welcome_letter
+    letter = Letters.find_first_letter
+  end
 end
